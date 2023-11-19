@@ -1,10 +1,35 @@
 {
   "name": "http-nodejs",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "Aiden Bai",
-  "license": "MIT",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
   "scripts": {
-    "start": "node server.mjs"
-  }
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@strapi/strapi": "4.15.4",
+    "@strapi/plugin-users-permissions": "4.15.4",
+    "@strapi/plugin-i18n": "4.15.4",
+    "@strapi/plugin-cloud": "4.15.4",
+    "pg": "8.8.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "5.3.4",
+    "styled-components": "5.3.3"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "b96c87dd-202b-4f48-bf7f-624f8643e518"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
 }
