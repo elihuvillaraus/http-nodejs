@@ -10,12 +10,13 @@ module.exports = ({ env }) => ({
       ssl: {
         rejectUnauthorized: env.bool("DATABASE_SSL_SELF", true),
       },
+      schema: env("DATABASE_SCHEMA", "public"),
     },
     debug: true,
     acquireConnectionTimeout: 600000,
     pool: {
-      min: 2,
-      max: 10,
+      min: env.int("DATABASE_POOL_MIN", 3),
+      max: env.int("DATABASE_POOL_MAX", 10),
     },
   },
 });
